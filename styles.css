@@ -169,7 +169,7 @@ height:100%;
 
 background-image:
 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-url("./video/parallax.mp4");
+url("./images/resort.jpeg");
 
 background-size:cover;
 background-position:center;
@@ -828,6 +828,121 @@ grid-column:span 1;
 
 .trip-form button{
 grid-column:span 1;
+}
+
+}
+/* ================= STORY SECTION ================= */
+
+.story-section{
+padding:160px 20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.story-section h2{
+font-size:48px;
+margin-bottom:30px;
+}
+
+.story-section p{
+font-size:18px;
+line-height:1.8;
+opacity:.85;
+}
+
+
+/* ================= LUXURY EXPERIENCES ================= */
+
+.luxury-experiences{
+padding:140px 80px;
+background:#0b1a2f;
+color:white;
+text-align:center;
+}
+
+.luxury-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+margin-top:60px;
+}
+
+.luxury-card{
+padding:40px;
+border:1px solid rgba(255,255,255,0.15);
+transition:.4s;
+}
+
+.luxury-card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
+}
+
+.luxury-card h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.luxury-card p{
+font-size:15px;
+opacity:.8;
+}
+
+
+/* ================= TRAVEL JOURNAL ================= */
+
+.journal{
+padding:140px 80px;
+text-align:center;
+}
+
+.journal-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:60px;
+}
+
+.journal-card{
+text-align:left;
+cursor:pointer;
+}
+
+.journal-card img{
+width:100%;
+border-radius:8px;
+transition:.4s;
+}
+
+.journal-card img:hover{
+transform:scale(1.05);
+}
+
+.journal-card h3{
+margin-top:15px;
+font-size:20px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.luxury-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.journal-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.luxury-grid{
+grid-template-columns:1fr;
 }
 
 }
