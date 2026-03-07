@@ -1337,3 +1337,71 @@ z-index:1000;
 .nav-links.active{
 display:flex;
 }
+
+@media (max-width:768px){
+
+.nav-links{
+
+position:absolute;
+
+top:70px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:200px;
+
+background:#0b1a2f;
+
+flex-direction:column;
+
+align-items:center;
+
+padding:20px;
+
+border-radius:8px;
+
+display:none;
+
+z-index:1000;
+
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+@media (max-width:768px){
+
+.trip-builder{
+padding:80px 20px;
+}
+
+.trip-form{
+
+grid-template-columns:1fr;
+
+max-width:100%;
+
+}
+
+.trip-form input,
+.trip-form select,
+.trip-form textarea{
+
+width:100%;
+
+}
+
+.trip-form textarea{
+grid-column:span 1;
+}
+
+.trip-form button{
+grid-column:span 1;
+}
+
+}
