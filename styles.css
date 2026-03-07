@@ -52,7 +52,7 @@ gap:45px;
 
 .nav-links a{
 text-decoration:none;
-color:#0b1a2f;
+color:#ffffff;
 font-size:16px;
 letter-spacing:1px;
 font-weight:900;
@@ -112,7 +112,7 @@ animation:fadeUp 1.2s ease;
 }
 
 .hero-content h1{
-font-size:64px;
+font-size:48px;
 margin-bottom:20px;
 }
 
@@ -408,6 +408,11 @@ height:200px;
 filter:drop-shadow(0 0 6px rgba(255,215,0,.4));
 }
 
+.footer ul{
+list-style:none;
+padding:0;
+margin:0;
+}
 
 /* ================= NEWSLETTER ================= */
 
@@ -477,7 +482,7 @@ position:absolute;
 top:80px;
 right:20px;
 flex-direction:column;
-background:white;
+background:#0b1a2f;
 padding:20px;
 border-radius:8px;
 width:200px;
