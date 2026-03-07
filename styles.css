@@ -1,0 +1,1220 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Playfair Display", serif;
+background:#ffffff;
+color:#111;
+line-height:1.5;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0px 60px;
+color:white;
+z-index:10;
+
+backdrop-filter:blur(3px);
+}
+
+.logo{
+font-size:24px;
+letter-spacing:2px;
+font-weight:500;
+}
+
+.logo img{
+height:125px;
+width:auto;
+display:block;
+object-fit:contain;
+filter:drop-shadow(0 0 6px rgba(255,215,0,.4));
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:45px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-size:16px;
+letter-spacing:1px;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:1;
+color:#d4af37;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.background-video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+z-index:-1;
+}
+
+/* ---------- HERO TEXT ---------- */
+
+.hero-content{
+animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translate(-50%, -40%);
+}
+
+100%{
+opacity:1;
+transform:translate(-50%, -50%);
+}
+
+}
+
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+z-index:5;
+max-width:700px;
+}
+
+.hero-content h1{
+font-size:64px;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.hero-content p{
+font-size:20px;
+margin-bottom:40px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.cta-button{
+padding:16px 40px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
+border-radius:40px;
+transition:.3s;
+}
+
+.cta-button:hover{
+background:#c39b2c;
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+}
+
+/* ---------- PARALLAX SECTION ---------- */
+
+.parallax{
+height:600px;
+
+background-image:
+linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+url("./video/parallax.mp4");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+padding:40px;
+}
+
+.parallax h2{
+font-size:42px;
+color:white;
+letter-spacing:2px;
+
+text-shadow:
+0px 4px 15px rgba(0,0,0,0.6),
+0px 10px 40px rgba(0,0,0,0.5);
+}
+
+/* ---------- DESTINATIONS SECTION ---------- */
+
+.destinations{
+padding:120px 80px;
+text-align:center;
+background-color:white;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:60px;
+letter-spacing:1px;
+}
+
+/* ---------- DESTINATION GRID ---------- */
+
+.destination-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+/* ---------- CARDS ---------- */
+
+.card{
+height:360px;
+background-size:cover;
+background-position:center;
+position:relative;
+
+display:flex;
+align-items:flex-end;
+padding:30px;
+
+color:white;
+font-size:26px;
+
+overflow:hidden;
+cursor:pointer;
+
+transition:transform .5s ease;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 20px 50px #d4af37;
+}
+
+/* dark overlay on cards */
+
+.card::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(transparent,rgba(0,0,0,.6));
+}
+
+.card h3{
+position:relative;
+z-index:2;
+font-size:28px;
+letter-spacing:1px;
+}
+
+.card h3::after{
+content:"";
+display:block;
+width:50px;
+height:2px;
+background:#d4af37;
+margin-top:8px;
+}
+
+/* ---------- DESTINATION IMAGES ---------- */
+
+.maldives{
+background-image:url("./images/maldives.jpeg");
+<div class="card maldives">
+
+  <div class="card-content">
+    <h3>Maldives</h3>
+    <a href="./contactus.html" class="card-button">Plan Trip →</a>
+  </div>
+
+</div>
+
+}
+
+.bora{
+background-image:url("./images/bora.jpeg");
+}
+
+.dubai{
+background-image:url("./images/dubai.jpeg");
+}
+
+.santorini{
+background-image:url("./images/santorini.jpeg");
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:1000px){
+
+.destination-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-content h1{
+font-size:48px;
+}
+
+}
+
+@media(max-width:600px){
+
+.navbar{
+padding:20px;
+}
+
+.destination-grid{
+grid-template-columns:1fr;
+}
+
+.hero-content h1{
+font-size:36px;
+}
+
+}
+
+/* EXPERIENCES SECTION */
+
+.experiences{
+padding:120px 80px;
+background:#0b1a2f;
+color:white;
+text-align:center;
+}
+
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-top:60px;
+}
+
+.experience-card{
+padding:40px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+transition:.4s;
+}
+
+.experience-card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:18px;
+}
+
+.experience-card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.experience-card p{
+font-size:16px;
+opacity:.8;
+}
+/* WHY SECTION */
+
+.why{
+padding:120px 80px;
+background:white;
+text-align:center;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-top:60px;
+}
+
+.why-card{
+padding:40px;
+border:1px solid #111;
+transition:.3s;
+}
+
+.why-card:hover{
+border-color:#d4af37;
+transform:translateY(-8px);
+}
+
+.why-card h3{
+margin-bottom:10px;
+font-size:16px;
+}
+
+.cta-section{
+padding:140px 20px;
+background:#0b1a2f;
+color:white;
+text-align:center;
+}
+
+.cta-section h2{
+font-size:40px;
+margin-bottom:30px;
+}
+
+.divider{
+width:80px;
+height:2px;
+background:#d4af37;
+margin:80px auto;
+}
+.footer{
+background:#0b1a2f;
+color:white;
+padding:80px 80px 30px;
+}
+
+.footer-container{
+
+display:grid;
+
+grid-template-columns:2fr 2fr 2fr 2fr;
+
+gap:40px;
+
+max-width:1200px;
+
+margin:0 auto;
+
+width:100%;
+
+}
+
+.footer h2{
+margin-bottom:10px;
+}
+
+.footer h4{
+
+margin-bottom:15px;
+
+position:relative;
+
+}
+
+.footer h4::after{
+
+content:"";
+
+display:block;
+
+width:40px;
+
+height:2px;
+
+background:#d4af37;
+
+margin-top:8px;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer a{
+
+text-decoration:none;
+
+color:white;
+
+opacity:.85;
+
+transition:.3s;
+
+}
+
+.footer a:hover{
+
+color:#d4af37;
+
+opacity:1;
+
+}
+
+.footer-bottom{
+
+margin-top:60px;
+
+padding-top:20px;
+
+border-top:1px solid rgba(255,255,255,0.1);
+
+text-align:center;
+
+opacity:.7;
+
+font-size:14px;
+
+}
+
+.footer-logo{
+height:200px;
+margin-bottom:0px;
+filter:drop-shadow(0 0 6px rgba(255,215,0,.4));
+
+}
+
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
+color:white;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.nav-links{
+position:absolute;
+top:80px;
+left:600px;
+width:20%;
+border-radius:10px;
+
+background:rgba(11,26,47,0.95);
+
+flex-direction:column;
+align-items:center;
+
+max-height:0;
+overflow:hidden;
+
+transition:max-height .4s ease;
+}
+
+.nav-links li{
+padding:20px 0;
+}
+
+.nav-links a{
+font-size:18px;
+}
+
+.nav-links.active{
+max-height:300px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+.overlay-menu{
+position:fixed;
+top:0;
+left:0;
+
+width:0%;
+height:100vh;
+
+background:#071733;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+opacity:0;
+visibility:hidden;
+
+transition:0.4s;
+
+z-index:999;
+
+background:rgba(6,16,35,0.95);
+backdrop-filter:blur(10px);
+
+}
+
+.overlay-menu ul{
+list-style:none;
+text-align:center;
+}
+
+.overlay-menu li{
+margin:30px 0;
+}
+
+.overlay-menu a{
+color:white;
+text-decoration:none;
+font-size:32px;
+letter-spacing:3px;
+transition:.3s;
+}
+
+.overlay-menu a:hover{
+color:#d4af37;
+}
+
+.overlay-menu.active{
+opacity:1;
+visibility:visible;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn{
+position:absolute;
+top:30px;
+right:40px;
+
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+/* ---------- ABOUT US ---------- */
+
+/* CONTACT HERO */
+
+.contact-hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:#0b1a2f;
+color:white;
+padding:20px;
+}
+
+.contact-hero h1{
+font-size:52px;
+margin-bottom:10px;
+}
+
+
+/* TRIP BUILDER */
+
+.trip-builder{
+padding:120px 80px;
+background:white;
+text-align:center;
+}
+
+.trip-form{
+max-width:900px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.trip-form input,
+.trip-form select,
+.trip-form textarea{
+padding:14px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:15px;
+}
+
+.trip-form textarea{
+grid-column:span 2;
+height:140px;
+}
+
+.trip-form button{
+grid-column:span 2;
+}
+
+/*----------- DESTINATIONS --------*/
+
+/* DESTINATIONS HERO */
+
+.destinations-hero{
+height:50vh;
+background:#0b1a2f;
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+}
+
+.destinations-hero h1{
+font-size:56px;
+margin-bottom:10px;
+text-align:center;
+
+}
+
+.destinations-page{
+padding:120px 80px;
+background:white;
+text-align:center;
+
+}
+
+.amalfi{
+background-image:url("./images/amalfi.jpeg");
+}
+
+
+.bali{
+background-image:url("./images/bali.jpeg");
+}
+
+.seychelles{
+background-image:url("./images/seychelles.jpeg");
+}
+
+.swiss{
+background-image:url("./images/alps.jpeg");
+}
+
+/* CARD CONTENT */
+
+.card-content{
+position:relative;
+z-index:3;
+}
+
+.card-button{
+
+display:inline-block;
+
+margin-top:15px;
+padding:10px 22px;
+
+background:#d4af37;
+color:black;
+
+font-size:14px;
+text-decoration:none;
+
+border-radius:20px;
+
+opacity:0;
+transform:translateY(10px);
+
+transition:.35s;
+}
+
+/* SHOW BUTTON ON HOVER */
+
+.card:hover .card-button{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/* DARKEN CARD ON HOVER */
+
+.card::before{
+
+content:"";
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.35);
+
+opacity:0;
+transition:.4s;
+
+z-index:1;
+
+}
+
+.card:hover::before{
+opacity:1;
+}
+
+/* ABOUT HERO */
+
+.about-hero{
+height:50vh;
+background:#0b1a2f;
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+}
+
+.about-hero h1{
+font-size:56px;
+margin-bottom:10px;
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+padding:120px 80px;
+background:white;
+}
+
+.about-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-text h2{
+font-size:40px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.about-text p{
+margin-bottom:20px;
+font-size:17px;
+line-height:1.7;
+}
+
+.about-image img{
+width:100%;
+border-radius:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.about-container{
+grid-template-columns:1fr;
+}
+
+}
+
+.about-image img{
+width:100%;
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.destination-hero{
+height:60vh;
+background:#0b1a2f;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+}
+
+.destination-hero h1{
+font-size:60px;
+}
+
+.destination-info{
+padding:120px 80px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.destination-info h2{
+font-size:40px;
+margin-bottom:30px;
+}
+
+.destination-info p{
+font-size:17px;
+margin-bottom:20px;
+line-height:1.7;
+}
+
+/* DESTINATION HERO */
+
+.destination-hero{
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+color:white;
+}
+
+/* MALDIVES HERO IMAGE */
+
+.maldives-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/maldives.jpeg");
+
+background-size:cover;
+background-position:center;
+}
+
+/* DESTINATION INFO */
+
+.destination-info{
+
+padding:120px 80px;
+max-width:900px;
+margin:auto;
+
+text-align:center;
+
+}
+
+.destination-info h2{
+
+font-size:40px;
+margin-bottom:30px;
+
+}
+
+.destination-info p{
+
+font-size:17px;
+line-height:1.7;
+margin-bottom:20px;
+
+}
+
+/* AMALFI HERO */
+
+.amalfi-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/amalfi.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+/* DUBAI HERO */
+
+.dubai-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/dubai.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+/* SANTORINI HERO */
+
+.santorini-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/santorini.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+.bali-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/bali.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+.seychelles-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/seychelles.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+.bora-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/bora.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+.swiss-hero{
+
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("./images/alps.jpeg");
+
+background-size:cover;
+background-position:center;
+
+height:60vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+}
+
+.date-range{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+border:1px solid #ddd;
+border-radius:6px;
+
+padding:8px 12px;
+
+}
+
+.date-range input{
+
+border:none;
+outline:none;
+
+font-size:15px;
+
+}
+
+.date-separator{
+
+font-size:18px;
+color:#888;
+
+}
+
+.newsletter-form{
+
+display:flex;
+justify-content:end;
+gap:10px;
+
+margin-top:10px;
+
+}
+
+.newsletter-form input{
+
+padding:12px 14px;
+
+border-radius:6px;
+
+border:none;
+
+width:350px;
+
+}
+
+.newsletter-form button{
+
+padding:12px 18px;
+
+background:#d4af37;
+
+border:none;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.newsletter-form button:hover{
+
+background:#c39b2c;
+
+transform:translateY(-2px);
+
+box-shadow:0 5px 15px rgba(212,175,55,.4);
+
+}
+
+.newsletter h4, .newsletter p {
+  display:flex;
+  justify-content:center;
+  align-content:center;
+    text-align:center;
+
+}
+
+.newsletter h4::after {
+  display:none;
+}
+
+@media (max-width:768px){
+
+.footer-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.newsletter{
+align-items:center;
+}
+
+.newsletter-form{
+justify-content:center;
+flex-direction:column;
+align-items:center;
+}
+
+.newsletter-form input{
+max-width:300px;
+width:100%;
+}
+
+.newsletter-form button{
+width:160px;
+}
+
+}
+
+@media (max-width:768px){
+
+.footer h4{
+text-align:center;
+}
+
+.footer h4::after{
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Plan Your Luxury Escape | EraNova Luxe</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="./index.html" class="logo">
+<img src="./images/1st.png" alt="EraNova Luxe Logo">
+</a>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="./about.html">About</a></li>
+<li><a href="./destinations.html">Destinations</a></li>
+<li><a href="./contactus.html">Contact Us</a></li>
+</ul>
+
+<div class="menu-toggle" id="menuToggle">≡</div>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="contact-hero">
+
+<h1>Plan Your Luxury Escape</h1>
+
+<p>Tell us about your dream trip and we'll design the perfect experience.</p>
+
+</section>
+
+<!-- TRIP BUILDER FORM -->
+
+<section class="trip-builder">
+
+<h2 class="section-title">Start Planning Your Journey</h2>
+
+<form action="https://formspree.io/f/mzdjbwyy" method="POST" class="trip-form">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<select name="destination">
+<option value="">Destination</option>
+<option>Maldives</option>
+<option>Bora Bora</option>
+<option>Dubai</option>
+<option>Santorini</option>
+<option>Bali</option>
+<option>Amalfi Coast</option>
+<option>Seychelles</option>
+<option>Swiss Alps</option>
+<option>Other</option>
+</select>
+
+<div class="date-range">
+
+<input type="date" name="travel_start_date">
+
+<span class="date-separator">→</span>
+
+<input type="date" name="travel_end_date">
+
+</div>
+
+
+<input type="number" name="travelers" placeholder="Number of Travelers">
+
+<select name="budget">
+<option value="">Estimated Budget</option>
+<option>$3,000 - $5,000</option>
+<option>$5,000 - $10,000</option>
+<option>$10,000 - $20,000</option>
+<option>$20,000+</option>
+</select>
+
+<select name="travel-style">
+<option value="">Travel Style</option>
+<option>Luxury Resorts</option>
+<option>Private Villas</option>
+<option>Luxury Cruises</option>
+<option>Honeymoon</option>
+<option>Adventure Travel</option>
+</select>
+
+<textarea name="message" placeholder="Tell us about your ideal trip..."></textarea>
+
+<button type="submit" class="cta-button">
+Submit Travel Inquiry
+</button>
+
+</form>
+
+
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY BOOK SECTION -->
+
+<section class="why">
+
+<h2 class="section-title">Why Book With EraNova Luxe</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>Luxury Partnerships</h3>
+<p>Access to exclusive resorts, villas, and premium cruise experiences worldwide.</p>
+</div>
+
+<div class="why-card">
+<h3>Personalized Planning</h3>
+<p>Every itinerary is carefully designed around your travel style.</p>
+</div>
+
+<div class="why-card">
+<h3>Stress Free Travel</h3>
+<p>We handle every detail so you can focus on enjoying the experience.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-brand">
+<a href="./index.html">
+<img src="./images/1st.png" alt="EraNova Luxe Logo" class="footer-logo">
+</a>
+</div>
+
+<div class="footer-links">
+
+<h4>Explore</h4>
+
+<ul>
+<li><a href="./about.html">About</a></li>
+<li><a href="./destinations.html">Destinations</a></li>
+<li><a href="./contactus.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+<div class="footer-social">
+
+<h4>Follow</h4>
+
+<ul>
+<li><a href="https://www.instagram.com/eranovaluxetravel/">Instagram</a></li>
+<li><a href="https://www.facebook.com/profile.php?id=61588333892212">Facebook</a></li>
+<li><a href="https://www.linkedin.com/company/eranova-luxe-travel">LinkedIn</a></li>
+</ul>
+
+</div>
+
+<div class="newsletter">
+  
+  <h4>Subscribe For Travel Inspiration</h4>
+  
+  <p>Get exclusive destinations, luxury travel tips, and special offers.</p>
+  
+  <form action="https://formspree.io/f/mzdjbwyy" method="POST" class="newsletter-form">
+    
+    <input type="email" name="email" placeholder="Enter your email" required>
+    
+    <button type="submit">Subscribe</button>
+    
+  </form>
+  
+</div>
+</div>
+
+
+<div class="footer-bottom">
+<p>© 2026 EraNova Luxe Travel</p>
+</div>
+
+</footer>
+
+<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>
+
+
